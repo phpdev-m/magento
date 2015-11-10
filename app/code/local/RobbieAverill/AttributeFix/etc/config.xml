@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <!--
+    /**
+     * Magento configurable attribute order fix - replace entity ID with relevance (Magento bugfix)
+     *
+     * @category Mage
+     * @package  RobbieAverill_AttributeFix
+     * @author   Robbie Averill <robbie@averill.co.nz>
+     */
+    -->
+    <modules>
+        <RobbieAverill_AttributeFix>
+            <version>0.1.3</version>
+        </RobbieAverill_AttributeFix>
+    </modules>    
+    <global>
+        <models>
+            <catalog_resource>
+                <rewrite>
+                    <product_type_configurable_attribute_collection>RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attribute_Collection</product_type_configurable_attribute_collection>
+                </rewrite>
+            </catalog_resource>
+        </models>
+    </global>
+    <phpunit>
+        <suite>
+            <modules>
+                <RobbieAverill_AttributeFix />
+            </modules>
+        </suite>
+    </phpunit>
+</config>

@@ -1,0 +1,14 @@
+language: php
+
+php:
+  - 5.3.3
+  - 5.3
+  - 5.4
+
+before_script:
+  - mv app/config/parameters.travis.yml app/config/parameters.yml
+  - mysql -e 'create database upfit_test;'
+  - composer install --dev
+
+script:
+  - ./check.sh
